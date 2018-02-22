@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home Page</title>
+	<link rel="stylesheet" type="text/css" href="addflightStyle.css">
+	</head>
+	<style>
+	.bookingID{
+margin:20px 0 0 0px;
+width:50px;
+}
+	</style>
+	<body>
+	<header>
+		<div class="container">
+				 <div class="grid">
+		<nav>
+			<ul>
+				<li class="dropdown">
+					<a href="addflights.html" class="dropbtn">Add Flights</a>
+				</li>
+			
+			<li class="dropdown">
+			<a href="deleteflights.html" class="dropbtn travel">Delete Flights</a>
+			</li>
+			<li class="dropdown">
+				<a href="HomePage.html" class="dropbtn">Logout</a>
+			</li>
+		</ul>
+	</nav>
+		</div>
+		</div>	
+	
+	</header>
+		<div class="bgimg">
+			<img src="images/flighthome.jpg"></img>
+		</div>
+		
+		<form action="deleteflights.php" method="post" style="margin: 0 0 0 450px;">
+		Enter the Source ID &nbsp&nbsp<input type="text" class="bookingID" name="sourceid" /><br>
+		Enter the Source Place &nbsp&nbsp<input type="text" class="bookingID" name="source" /><br>
+		Enter the Destination &nbsp&nbsp<input type="text" class="bookingID" name="destination" />
+		<input type="submit" style="padding: 5px 5px 5px 5px;" value="submit"/>
+		</form>
+</body>
+</html>

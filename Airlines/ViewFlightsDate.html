@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home Page</title> 
+	<link rel="stylesheet" type="text/css" href="addflightStyle.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.0/jquery.validate.min.js"></script>
+	</head>
+	<style>
+	.input_name{
+ width:207px;
+ padding:5px;
+ font-size:18px;
+ border: 1px solid #d3d3d3;
+ }
+	</style>
+	<script>
+	
+	function display(val) {
+	var datevalue = document.getElementById("viewflights");
+	var str = datevalue.options[datevalue.selectedIndex].text;
+	if(str == "seven days")
+	{
+		//alert(new Date().getDate()+6);
+		var datevalue = new Date(new Date().setDate(new Date().getDate() + 6));
+		//alert(datevalue);
+		var val =datevalue.toISOString();
+		//alert(val);
+		$.ajax({
+		type: 'POST',
+		url: "view.php",
+		data:'datevalue='+val,
+		datatype:'json',
+		success: function(data){
+		document.write(data);
+		console.log(data);
+		//alert("success");
+	
+		}
+	});
+	}
+else
+{
+$.ajax({
+		type: 'POST',
+		url: "view2.php",
+		datatype:'json',
+		success: function(data){
+			document.write(data);
+			console.log(data);
+			//alert("success");
+	
+	}
+	
+
+});
+}
+}
+
+	</script>
+	<header>
+		<div class="container">
+				 <div class="grid">
+		<nav>
+			<ul>
+				<li class="dropdown">
+					<a href="addflights.html" class="dropbtn">Add Flights</a>
+				</li>
+			
+			<li class="dropdown">
+			<a href="cancelflight.html" class="dropbtn">Cancel Flight</a>
+			</li>
+			
+			<li class="dropdown">
+			<a href="viewFlights.php" class="dropbtn">View Flights</a>
+			</li>
+			
+			<li class="dropdown">
+				<a href="admin.html" class="dropbtn">Logout</a>
+			</li>
+		</ul>
+	</nav>
+		</div>
+		</div>	
+	
+	</header>
+		<div class="bgimg">
+			<img src="images/flighthome.jpg"></img>
+		</div>
+	<body>
+	<div align="center">
+	 <select name="viewflights" id="viewflights"  class="input_name" onChange="display(this.value)">
+				 <option value="" selected >View Flights</option>
+				<option value="seven days">seven days</option>
+					<option value="all">all</option>
+					</select> 
+					
+		</div>			
+	</body>
+	</html>

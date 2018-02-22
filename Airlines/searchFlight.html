@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" class="home">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width", initial-scale=1">
+	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+ <link rel="stylesheet" href="index.css">
+ <script src="bookvalid.js"></script>
+  <body background="books.jpg">
+	<div id="main_container">
+		<div id="header">
+			<div id="logo">
+					<h1>Book & Fly</h1>
+			
+				<div class="headers">
+						<h2></h2>
+				<div class="register">
+				  <form method="post" name="Form" action="book.php">
+				  <!--<div id="title" class="from">
+						<label for="titles">Title</label>
+						<div class="options">						
+							<select id="s1">
+								  <option value="--" selected>--</option>
+								  <option value="volvo">Mr.</option>
+								  <option value="saab">Ms.</option>
+								  <option value="opel">Mrs.</option>
+								  <option value="audi">Child</option>
+							</select>
+						</div>
+                    </div>-->
+					<div class="two-col">
+						<div class="col1">
+							<label for="field1"> From:</label>
+							<input id="from" class="fields" name="from" type="text" value="">
+						</div>
+
+						<div class="col2">
+							<label for="field2">To:</label>
+							<input id="to" class="fields" name="to" type="text" value="">
+						</div>
+					</div>
+					<br>
+					<div class="two-col">
+						<div class="col1">
+							<label for="field1"> Depart:</label>
+							<div class="options">						
+								<input id="depart" class="fields" name="depart" type="date" value=""/>
+							</div>
+						</div>
+
+						<div class="col2">
+							<label for="field2">Return:</label>
+							<input id="return" class="fields" name="return" type="date" value="">
+						</div>
+					</div>
+					  <br>
+					  <div class="two-col">
+						<div class="col1">
+							<label for="field1">Passengers:</label>
+								<input id="passengers" class="fields" name="passengers" type="text" value="">
+							</div>
+						<!--<div class="col2">
+							<label for="field2">Gender*:</label>
+							<div class="options">						
+								<select id="gender" class="fields">
+								  <option value="--" selected>--</option>
+								  <option value="volvo">Male</option>
+								  <option value="saab">Female</option>
+								</select>
+							</div>
+						</div>-->
+						<!--<div class="col2">
+							<label for="field2">Confirm Email*:</label>
+							<input id="cemail" class="fields" name="cemail" type="text" value="">
+						</div>-->
+					</div>
+				
+					  
+					  <br>
+					<!--  <input type="checkbox" name="terms" value="check">I agree to the <a target="_blank" href="#"></a> Terms and Conditions<br><br>-->
+					  <input class="btn" id="submit" name="search" type="search" value="search">
+					
+					</form> 
+				</div>
+					
+				</div>
+			</div>
+		</div>	
+		
+	</div>	
+ 
+  <?php 
+if(isset($_POST["search"])){include('book.php');}
+?>
+
+ </body>
+</html>  

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/ui-darkness/jquery-ui.min.css" rel="stylesheet">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="cancel.css">
+  </head>
+  <script>
+ $(document).ready(function () {
+    var date = new Date();
+    var currentMonth = date.getMonth();
+    var currentDate = date.getDate();
+    var currentYear = date.getFullYear();
+    $('#datepicker1').datepicker({
+        minDate: new Date(currentYear, currentMonth, currentDate),
+        dateFormat: 'yy-mm-dd'
+    });
+	
+});
+</script>
+  <script>
+function redirectFile()
+{
+	window.location.href = "WriteToFile_Cancel.php";
+}	
+
+</script>
+  <body>
+	<header>
+		<div class="container">
+				 <div class="grid">
+			<nav>
+			<ul>
+				<li class="dropdown">
+					<a href="addflights.html" class="dropbtn">Add Flights</a>
+				</li>
+			
+			<li class="dropdown">
+			<a href="cancelflight.html" class="dropbtn">Cancel Flights</a>
+			</li>
+			
+			
+			<li class="dropdown">
+			<a href="viewFlightsDate.html" class="dropbtn">View Flights</a>
+			</li>
+			
+			<li class="dropdown">
+				<a href="HomePage.html" class="dropbtn">Logout</a>
+			</li>
+		</ul>
+	</nav>
+		</div>
+		</div>	
+	
+	</header>
+	<div class="bgimg">
+			<img src="images/flighthome.jpg"></img>
+		</div>
+<body>
+<form method="post" action="cancelflight.php" style="margin:100px 0 0 500px;">
+		<h2>Cancel Flights</h2><br><br>
+		Enter  your depart date &nbsp&nbsp<input type="date" id="datepicker1" class="bookingID" name="departdate" /><br/><br/>
+		Enter  your flight id &nbsp&nbsp<input type="text" class="bookingID" name="flightid" /><br/><br/>
+		
+		<input type="submit" style="padding: 5px 5px 5px 5px;" value="submit"/>
+			
+</form>
+</body>
+</html>

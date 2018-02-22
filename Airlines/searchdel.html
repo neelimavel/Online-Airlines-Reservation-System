@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" class="home">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+ <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="searchdel.css">
+  <script src="searchdel.js"></script>
+
+ <script src="bookvalid.js"></script>
+  <body background="books.jpg">
+	<div id="main_container">
+		<div id="header">
+			<div id="logo">
+				<div class="headers">
+						<h2>Search Ticket</h2>
+				</div>
+			</div>
+			<br>
+		</div>
+		<div id="navButton">
+			<ul>
+				<li class="dropdown">
+					<a href="HomePage.html" class="dropbtn">US Airlines</a>
+				</li>
+				<div class="dropdown">
+				  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+				  <div id="myDropdown" class="dropdown-content">
+					<a href="search.html">Link 1</a>
+					<a href="otherRestaurant.html">Link 2</a>
+					<a href="otherRestaurant.html">Link 3</a>
+				  </div>
+				</div>
+				<div class="dropdown">
+				  <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+				  <div id="myDropdown" class="dropdown-content">
+					<a href="search.html">Link 1</a>
+					<a href="otherRestaurant.html">Link 2</a>
+					<a href="otherRestaurant.html">Link 3</a>
+				  </div>
+				</div>
+				
+				
+				<li class="dropdown">
+					<a href="contact.html" class="dropbtn">Contact US</a>
+				</li>
+			</ul>
+		</div>
+		<form name="verify_form" action="search.php" id="searches"  method="post">
+			<table>
+			<tr class="from"><td>From Place:</td><td>
+			<!--place-->
+			<input type="text" list="from" name="from" />
+				<datalist id="from">
+				  <option>alaska</option>
+				  <option>atlanta</option>
+				  <option>australia</option>
+				  <option>andhra</option>
+				  <option>boston</option>
+				  <option>chicago</option>
+				  <option>china</option>
+				  <option>dallas</option>
+				</datalist>
+				</td></tr>
+			<!--end-->
+			<br>
+					<tr><td>To Place:</td><td>
+					<!--place-->
+			<input type="text" list="from" name="to"/>
+				<datalist id="to">
+				  <option>alaska</option>
+				  <option>atlanta</option>
+				  <option>australia</option>
+				  <option>andhra</option>
+				  <option>boston</option>
+				  <option>chicago</option>
+				  <option>china</option>
+				  <option>dallas</option>
+				</datalist></td></tr>
+			<!--end-->
+					
+					<tr class="arrivals"><td>arrival date:</td><td><input id="Arrivaldate" name="depart" type="date" value=""/></select></td></tr>
+					<tr class="returns"><td>return date:</td><td><input id="Returndate" name="returndate" type="date" value=""/></select></td></tr>
+					<tr><td>passengers: </td><td><input type="text" name="vendor"></td></tr>
+					<tr><td><input type="submit" name="Submit" value="Submit"></td></tr></table>
+					</form>
+<?php 
+if(isset($_POST["Submit"])){include('validation.php');}
+?>
+</div>
+</html>

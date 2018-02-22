@@ -1,0 +1,270 @@
+*{
+border:0;
+margin:0;
+padding:0;
+ box-sizing: border-box;
+
+}
+
+body{
+margin:0 auto;
+font-family: 'Open Sans', sans-serif;
+}
+div, p, ul, h1, h2, h3{
+margin:0px;
+padding:0px;
+ }
+ul{
+list-style-type:none;
+}
+
+body{
+	margin:0 auto;
+	/*background:url(images/mains_img.jpg);*/
+	background-size:cover;
+	font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.72857;
+}
+ h4{
+	position:relative;
+	color:black;
+	
+}
+.container-fluid   {
+	
+	background-image:url("images/header.jpg");
+	
+}
+
+.col-xs-12  h3{
+	color:white;
+	text-decoration: none;
+font-size:1em;
+text-align:right;
+margin-right:100px;
+font-weight:bold;
+}
+.col-xs-12.welcome h3{
+	color:white;
+font-size:1.5em;
+text-align:left;
+margin-top:10px;
+font-weight:bold;
+}
+.col-xs-6.search{
+	border:1px solid black;
+	background-color:white;
+}
+.col-xs-6.book{
+	border:1px solid black;
+	background-color:white;
+}
+.col-xs-6:nth-child(1){
+	
+}
+.col-xs-12 .col-xs-3:nth-child(1){
+	font-style:italic;
+	
+}
+.col-xs-6 a{
+	color:black;
+	text-decoration: none;
+font-size:1em;
+text-align:center;
+font-weight:bold;
+}
+.col-xs-12  a{
+	color:white;
+	text-decoration: none;
+font-size:1.5em;
+text-align:center;
+font-weight:bold;
+
+}
+.row.links {
+    margin-top: 15px;
+	margin-left:50px;
+	
+}
+#liBookFlight{
+	float:left;
+	width:47%;
+	border-right:1px solid grey;
+	margin-left:10px;
+}
+#liCheckin{
+	float:left;
+	width:47%;
+	margin-left:20px;
+	border-right:1px solid grey;
+}
+.left-container{
+	border:1px solid black;
+}
+.sub-container{
+	width:40%;
+	border:1px solid black;
+	margin-left:100px;
+
+}
+.row.search{
+	border:1px solid white;
+	width:35%;
+	margin-left:8%;
+
+}
+.navigation__title{
+	color:white;
+	text-align:center;
+}
+#logo{
+	text-align:center;
+}
+.two-col {
+    overflow: hidden;/* Makes this div contain its floats */
+}
+
+
+
+.two-col .col1 {
+    float: left;
+    /* text-align: center; */
+    width: 25%;
+    margin-left: 200px;
+
+.two-col .col2 {
+    float: right;
+}
+
+.two-col .col2 {
+    float: right;
+    width: 25%;
+    margin-right: 150px;
+}
+.fields{
+	height:40px;
+	width:30%;
+}
+.btn {
+    color: orange;
+    padding: 8px 20px;
+    border: 2px solid orange;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+form#searches {
+    text-align: -webkit-center;
+}
+td {
+    padding: 5px;
+	font-size:20px;
+	}
+	table tr {
+    display: inline-block;
+}
+tr.arrivals {
+    display: block;
+	margin-left: 150px;
+}
+}
+tr.returns {
+   
+	margin-left: 150px;
+}
+}
+.button { 
+         background-color: #00CCFF;
+         padding: 8px 16px;
+         display: inline-block;
+         text-decoration: none;
+         color: #FFFFFF;
+         border-radius: 3px;
+}
+.button:hover{ background-color: #0066FF;}
+div#myCarousel {
+    text-align:center;
+	margin-top:70px;
+    
+}
+.item {
+    display: none;
+    position: relative;
+    .transition(.4s ease-in-out left);
+}
+#header{
+	
+}
+#container{
+	
+	border:2px solid black;
+	clear:both;
+}
+.left-content{
+	float:left;
+	width:45%;
+}
+.right-content p{
+	float:left;
+	width:45%;
+	
+}
+input {
+    border: 1px solid #000;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input#Arrivaldate {
+    padding: 12px 20px;
+    margin: 8px 0;
+}
+input#Returndate {
+    padding: 12px 20px;
+	margin: 8px 0;
+}
+input[type="submit"] {
+	width: 100%;
+    padding: 15px 40px;
+    margin: 8px 0;
+}
+
+tr.sub {
+    display: block;
+    margin-left: 200px;
+    padding: 15px;
+}
+h2 {
+    text-align: center;
+}
+tr.ps {
+    display: block;
+	    margin-left: 150px;
+}
+tr.returns {
+    margin-left: 150px;
+}
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=text]:focus {
+    background-color: lightblue;
+}
+.container-fluid {
+     padding-right: 0px; 
+padding-left: 0px; }
+.dropdown, .dropup {
+    position: inherit; */
+}
+.headers {
+    margin-top: 100px;
+}
